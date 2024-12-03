@@ -1,0 +1,15 @@
+Feature Name,Description
+UID,"Unique identifier for each operation, ranging from 1 to 10,000."
+Product ID,"Product identifier indicating quality: ""L"" (Low), ""M"" (Medium), and ""H"" (High)."
+Type,"Product quality type (""L"", ""M"", or ""H"")."
+Air Temperature [K],Ambient temperature around the machine; centered around 300 K with a standard deviation of 2 K.
+Process Temperature [K],"Temperature during the machine operation, centered around 310 K (air temperature + 10 K)."
+Rotational Speed [rpm],"Speed of the machine tool in revolutions per minute, derived from a 2860 W power base with noise."
+Torque [Nm],"Applied force during the operation, normally distributed around 40 Nm with a standard deviation of 10."
+Tool Wear [min],"Amount of wear on the tool during operation, incremented based on product quality."
+Machine Failure,Class label (0 or 1) indicating if a failure occurred.
+TWF,"Tool Wear Failure (1 if true, 0 otherwise), occurs randomly between 200–240 mins."
+HDF,"Heat Dissipation Failure (1 if true, 0 otherwise), based on temperature difference and speed."
+PWF,"Power Failure (1 if true, 0 otherwise), occurs if operational power deviates beyond set limits."
+OSF,"Overstrain Failure (1 if true, 0 otherwise), due to torque and tool wear exceeding quality thresholds."
+RNF,"Random Failure, with a 0.1% chance of occurrence independently of other parameters."
